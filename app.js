@@ -14,3 +14,19 @@ function getComputerChoice () {
 
 // Getting input from the user via a prompt. //
 
+let playerSelection = prompt("type rock, paper, or scissors");
+let computerSelection = getComputerChoice();
+
+// play a round //
+function playRound(playerSelection, computerSelection) {
+    if (playerSelection === computerSelection){
+        return "You both selected the same object/ The Game is a tie";
+    }
+    else if ((playerSelection === 'rock' && computerSelection === 'scissors')||
+             (playerSelection === 'paper' && computerSelection === 'rock') ||
+             (playerSelection === "scissors" && computerSelection === 'paper'))
+        return "You win"
+    else {
+        return "You lose"
+    }
+}
