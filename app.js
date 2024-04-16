@@ -31,7 +31,19 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-console.log(playRound(playerSelection, computerSelection));
-playRound();
-playRound();
+// play a five round game
+function playGame(){
+    let playerScore = 0;
+    let computerScore =0;
 
+    for(let i = 0; i < 5; i++) {
+        let result = playRound(playerSelection, computerSelection);
+        
+        if (result === "You win " + playerSelection + " beats " + computerSelection + ".") {
+            playerScore += 1;
+    }       else if (result === "You lose " + computerSelection + " beats " + playerSelection + ".") {
+            computerScore =+ 1;
+    }
+        console.log(`Round ${i+1}: ${result}`);
+    }
+}
