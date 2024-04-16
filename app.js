@@ -20,13 +20,13 @@ let computerSelection = getComputerChoice();
 // play a round //
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection){
-        return "You both selected the same object/ The Game is a tie";
+        return "You both selected " +playerSelection ". The Game is a tie";
     }
     else if ((playerSelection === 'rock' && computerSelection === 'scissors')||
              (playerSelection === 'paper' && computerSelection === 'rock') ||
              (playerSelection === "scissors" && computerSelection === 'paper'))
-        return "You win"
+        return "You win " +playerSelection " beats" +computerSelection "."
     else {
-        return "You lose"
+        return "You lose" +computerSelection " beats" +playerSelection "."
     }
 }
